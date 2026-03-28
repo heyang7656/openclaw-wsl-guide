@@ -404,14 +404,14 @@ openclaw gateway restart
 
 ---
 
-## 五、国�?API 配置
+## 五、国冿API 配置
 
 ### 5.1 MiniMax（推荐）
 
-**特点**：国内直连，响应快，有免费额�?
-**配置步骤**�?
-1. 访问 https://platform.minimaxi.com 注册并获�?API Key
-2. 配置 OpenClaw�?
+**特点**：国内直连，响应快，有免费额庿
+**配置步骤**＿
+1. 访问 https://platform.minimaxi.com 注册并获叿API Key
+2. 配置 OpenClaw＿
 ```bash
 openclaw config set models.provider minimax
 openclaw config set models.api_key sk-xxxxxxxxxxxxxxxx
@@ -424,9 +424,9 @@ openclaw config set models.default abab6.5
 
 **特点**：性价比高，中文支持优秀
 
-**配置步骤**�?
-1. 访问 https://open.bigmodel.cn 注册并获�?API Key
-2. 配置�?
+**配置步骤**＿
+1. 访问 https://open.bigmodel.cn 注册并获叿API Key
+2. 配置＿
 ```bash
 openclaw config set models.provider zhipu
 openclaw config set models.api_key xxxxxxxxxxxxxxxxxx
@@ -435,7 +435,7 @@ openclaw config set models.default glm-4
 
 3. 重启验证：`openclaw gateway restart`
 
-### 5.3 阿里云百炼（通义千问�?
+### 5.3 阿里云百炼（通义千问＿
 ```bash
 openclaw config set models.provider bailian
 openclaw config set models.api_key sk-xxxxxxxxxxxxxxxx
@@ -450,7 +450,7 @@ openclaw config set models.api_key xxxxxxxxxxxxxxxxxx
 openclaw config set models.default doubao-pro-4k
 ```
 
-### 5.5 本地模型（Ollama�?
+### 5.5 本地模型（Ollama＿
 **完全免费，隐私性好**
 
 ```bash
@@ -473,41 +473,41 @@ openclaw models test
 
 ---
 
-## 六、常见问�?A&Q
+## 六、常见问颿A&Q
 
 ### Q1: openclaw 命令不存在？
 
-**解决方案**�?
+**解决方案**＿
 ```bash
-# 添加�?PATH
+# 添加刿PATH
 echo 'export PATH=$(npm config get prefix)/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### Q2: Windows 执行策略禁止运行脚本�?
-**解决方案**（在 Windows PowerShell 管理员模式）�?
+### Q2: Windows 执行策略禁止运行脚本＿
+**解决方案**（在 Windows PowerShell 管理员模式）＿
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 ```
 
 ### Q3: 端口 18789 被占用？
 
-**解决方案**�?
+**解决方案**＿
 ```bash
-# 查找并终止占用进�?sudo netstat -tulpn | grep 18789
+# 查找并终止占用进稿sudo netstat -tulpn | grep 18789
 sudo kill -9 <PID>
 
-# 或修改端�?openclaw config set gateway.port 18790
+# 或修改端叿openclaw config set gateway.port 18790
 openclaw gateway restart
 ```
 
-### Q4: Gateway 无法启动�?
-**解决方案**�?
+### Q4: Gateway 无法启动＿
+**解决方案**＿
 ```bash
 # 查看详细日志
 openclaw logs --tail 100
 
-# 检�?API Key 配置
+# 检柿API Key 配置
 openclaw config list | grep api
 
 # 手动启动调试
@@ -516,10 +516,10 @@ openclaw gateway start --verbose
 
 ### Q5: API Key 配置后仍然报错？
 
-**解决方案**�?
+**解决方案**＿
 1. 验证 API Key 格式是否正确
-2. 检�?Base URL 配置
-3. 测试 API 连接�?```bash
+2. 检柿Base URL 配置
+3. 测试 API 连接＿```bash
 curl -X POST https://api.minimaxi.com/v1/chat/completions \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
@@ -527,15 +527,15 @@ curl -X POST https://api.minimaxi.com/v1/chat/completions \
 ```
 4. 确认账户余额充足
 
-### Q6: 如何接入微信/飞书�?
-**接入飞书**�?1. `openclaw skills install feishu-connector`
-2. 在飞书开放平台创建应�?3. 配置 App ID �?Secret
+### Q6: 如何接入微信/飞书＿
+**接入飞书**＿1. `openclaw skills install feishu-connector`
+2. 在飞书开放平台创建应甿3. 配置 App ID 咿Secret
 4. 重启 Gateway
 
-**接入微信**：目前需要通过企业微信或第三方桥接服务�?
+**接入微信**：目前需要通过企业微信或第三方桥接服务〿
 ### Q7: 技能安装失败？
 
-**解决方案**�?
+**解决方案**＿
 ```bash
 # 使用 Git 代理
 git config --global http.proxy http://127.0.0.1:7890
@@ -547,15 +547,15 @@ git clone https://github.com/user/skill-name.git
 
 ### Q8: 如何备份和恢复配置？
 
-**备份**�?```bash
+**备份**＿```bash
 tar -czf openclaw-backup-$(date +%Y%m%d).tar.gz ~/.openclaw/
 ```
 
-**恢复**�?```bash
+**恢复**＿```bash
 tar -xzf openclaw-backup-20260328.tar.gz -C ~/
 ```
 
-### Q9: 如何查看资源使用情况�?
+### Q9: 如何查看资源使用情况＿
 ```bash
 # 查看内存使用
 ps aux | grep openclaw
@@ -573,36 +573,36 @@ du -sh ~/.openclaw/
 # 使用 npm 更新
 npm update -g openclaw
 
-# 或使用安装脚本重新安�?curl -fsSL https://open-claw.org.cn/install-cn.sh | bash
+# 或使用安装脚本重新安裿curl -fsSL https://open-claw.org.cn/install-cn.sh | bash
 ```
 
 ---
 
-## 七、卸载指�?
+## 七、卸载指卿
 ### 7.1 完全卸载 OpenClaw
 
-**步骤 1**：停止所有相关服�?
+**步骤 1**：停止所有相关服势
 ```bash
 openclaw gateway stop
 pkill -f openclaw
 ```
 
-**步骤 2**：删除安装目�?
+**步骤 2**：删除安装目彿
 ```bash
 rm -rf ~/.openclaw
 rm -rf ~/.cache/openclaw
 rm -rf ~/.local/share/openclaw
 ```
 
-**步骤 3**：卸载全局�?
+**步骤 3**：卸载全局匿
 ```bash
 npm uninstall -g openclaw
 ```
 
-**步骤 4**：清理环境变�?
+**步骤 4**：清理环境变釿
 ```bash
 nano ~/.bashrc
-# 删除 OpenClaw 相关�?source ~/.bashrc
+# 删除 OpenClaw 相关衿source ~/.bashrc
 ```
 
 ### 7.2 删除系统服务
@@ -614,25 +614,25 @@ sudo rm /etc/systemd/system/openclaw.service
 sudo systemctl daemon-reload
 ```
 
-### 7.3 清理防火墙规�?
+### 7.3 清理防火墙规刿
 ```powershell
-# �?Windows PowerShell 中执�?Remove-NetFirewallRule -DisplayName "OpenClaw-*"
+# 圿Windows PowerShell 中执衿Remove-NetFirewallRule -DisplayName "OpenClaw-*"
 ```
 
-### 7.4 清理 Docker 容器（如使用�?
+### 7.4 清理 Docker 容器（如使用＿
 ```bash
 docker stop openclaw
 docker rm openclaw
 docker rmi openclaw/openclaw:latest
 ```
 
-### 7.5 完全清理检�?
+### 7.5 完全清理检柿
 ```bash
-# 检查残留文�?find ~ -name "*openclaw*" 2>/dev/null
+# 检查残留文仿find ~ -name "*openclaw*" 2>/dev/null
 
-# 检查进�?ps aux | grep openclaw
+# 检查进稿ps aux | grep openclaw
 
-# 检查端�?netstat -tulpn | grep 18789
+# 检查端叿netstat -tulpn | grep 18789
 ```
 
 ---
@@ -643,7 +643,7 @@ docker rmi openclaw/openclaw:latest
 
 #### 内存优化
 
-�?`~/.openclaw/config.json` 中添加：
+圿`~/.openclaw/config.json` 中添加：
 
 ```json
 {
@@ -663,14 +663,14 @@ openclaw config set concurrency.maxWorkers 2
 
 ### 8.2 网络优化
 
-#### 配置代理加�?
+#### 配置代理加逿
 ```bash
 openclaw config set proxy.http http://127.0.0.1:7890
 openclaw config set proxy.https http://127.0.0.1:7890
 openclaw config set network.timeout 30000
 ```
 
-#### CDN 加�?
+#### CDN 加逿
 ```bash
 openclaw config set registry.npm https://registry.npmmirror.com
 openclaw config set registry.pnpm https://registry.npmmirror.com
@@ -689,7 +689,7 @@ openclaw cache clean
 
 # 自动清理（每周日凌晨 2 点）
 crontab -e
-# 添加�? 2 * * 0 openclaw cache clean
+# 添加＿ 2 * * 0 openclaw cache clean
 ```
 
 ### 8.4 日志优化
@@ -707,14 +707,14 @@ openclaw config set logRotation.maxFiles 5
 ### 8.5 启动优化
 
 ```bash
-# 预加载常用技�?openclaw config set preload.skills "[\"file-manager\", \"web-search\", \"browser-control\"]"
+# 预加载常用技胿openclaw config set preload.skills "[\"file-manager\", \"web-search\", \"browser-control\"]"
 
-# 禁用不必要的技�?openclaw skills disable unused-skill-name
+# 禁用不必要的技胿openclaw skills disable unused-skill-name
 ```
 
-### 8.6 监控与告�?
+### 8.6 监控与告譿
 ```bash
-# 配置健康检�?openclaw config set healthCheck.enabled true
+# 配置健康检柿openclaw config set healthCheck.enabled true
 openclaw config set healthCheck.interval 60
 
 # 配置告警通知
@@ -725,7 +725,7 @@ openclaw config set alerts.threshold.cpu 90
 
 ### 8.7 备份策略
 
-**自动化备份脚�?*（保存为 `~/backup-openclaw.sh`）：
+**自动化备份脚朿*（保存为 `~/backup-openclaw.sh`）：
 
 ```bash
 #!/bin/bash
@@ -742,16 +742,16 @@ tar -czf $BACKUP_DIR/openclaw-backup-$DATE.tar.gz \
   $BACKUP_DIR/config-$DATE \
   $BACKUP_DIR/skills-$DATE
 
-# 保留最�?7 天的备份
+# 保留最迿7 天的备份
 find $BACKUP_DIR -name "*.tar.gz" -mtime +7 -delete
 
 echo "Backup completed: $BACKUP_DIR/openclaw-backup-$DATE.tar.gz"
 ```
 
-**定时备份**（每天凌�?3 点）�?
+**定时备份**（每天凌晿3 点）＿
 ```bash
 crontab -e
-# 添加�? 3 * * * /home/heyang/backup-openclaw.sh
+# 添加＿ 3 * * * /home/heyang/backup-openclaw.sh
 ```
 
 ### 8.8 团队协作优化
@@ -763,12 +763,12 @@ openclaw config export team-config.json
 # 团队成员导入
 openclaw config import team-config.json
 
-# 统一技能版�?openclaw plugins list --json > plugins.json
+# 统一技能版朿openclaw plugins list --json > plugins.json
 ```
 
 ### 8.9 定期维护建议
 
-**每周执行一�?*�?
+**每周执行一欿*＿
 ```bash
 # 清理缓存
 openclaw cache clean
@@ -776,32 +776,32 @@ openclaw cache clean
 # 清理日志
 openclaw logs clean --days 7
 
-# 检查更�?openclaw check-update
+# 检查更斿openclaw check-update
 ```
 
-**每月执行一�?*�?
+**每月执行一欿*＿
 ```bash
-# 清理旧数�?openclaw db cleanup --days 30
+# 清理旧数捿openclaw db cleanup --days 30
 
-# 重新安装技�?openclaw skills update --all
+# 重新安装技胿openclaw skills update --all
 ```
 
 ---
 
 ## 结语
 
-恭喜你完�?OpenClaw 的安装和配置！现在你已经拥有了一个强大的 AI 智能体助手�?
-**下一步建�?*�?- 尝试用自然语言�?OpenClaw 下达指令
+恭喜你完房OpenClaw 的安装和配置！现在你已经拥有了一个强大的 AI 智能体助手〿
+**下一步建访*＿- 尝试用自然语言绿OpenClaw 下达指令
 - 探索各种技能和插件
-- 接入飞书�?Telegram 等通讯平台
+- 接入飞书房Telegram 等通讯平台
 - 参与社区分享使用经验
 
-**官方资源**�?- OpenClaw 官网：https://openclaw.ai
+**官方资源**＿- OpenClaw 官网：https://openclaw.ai
 - 官方文档：https://docs.openclaw.ai
 - GitHub：https://github.com/OpenClaw-CN/openclaw
 - 社区论坛：https://community.openclaw.ai
 
-**实用技�?*�?- 多用 `--help` 查看命令帮助
-- 定期更新获取最新功�?- 合理配置 API Key 避免超额使用
-- 重要操作前做好备�?
-祝你使用愉快！�?
+**实用技巿*＿- 多用 `--help` 查看命令帮助
+- 定期更新获取最新功胿- 合理配置 API Key 避免超额使用
+- 重要操作前做好备仿
+祝你使用愉快！🦿
