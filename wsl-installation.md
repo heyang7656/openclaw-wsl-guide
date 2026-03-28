@@ -355,10 +355,10 @@ netsh interface portproxy add v4tov4 listenport=18789 listenaddress=0.0.0.0 conn
 sudo visudo
 ```
 
-在文件末尾添加以下内容（将 `spoto` 替换为你的实际用户名）：
+在文件末尾添加以下内容（将 `heyang` 替换为你的实际用户名）：
 
 ```
-spoto ALL=(ALL) NOPASSWD: ALL
+heyang ALL=(ALL) NOPASSWD: ALL
 ```
 
 保存并退出（Ctrl+O → Enter → Ctrl+X）。
