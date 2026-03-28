@@ -4,7 +4,7 @@
 
 ## 内容
 
--    [WSL安装与配置指南](01-WSL安装与配置指南.md)    
+-    [WSL安装与配置指南](01-WSL 安装与配置指南.md)    
 -    [WSL 安装与 OpenClaw 部署指南](02-Opencode 安装与使用教程.md)
 -    [WSL 安装与 OpenClaw 部署指南](wsl-installation.md)
 -    [WSL 安装与 OpenClaw 部署指南](wsl-installation.md)
