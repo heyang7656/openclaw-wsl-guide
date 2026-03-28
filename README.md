@@ -4,7 +4,7 @@
 
 ## 内容
 
--    [[WSL安装与配置指南](https://github.com/heyang7656/openclaw-wsl-guide/blob/main/01-WSL%20%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97.md)  
+-    [WSL安装与配置指南](https://github.com/heyang7656/openclaw-wsl-guide/blob/main/01-WSL%20%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97.md)  
 -    [opencode安装与使用教程](https://github.com/heyang7656/openclaw-wsl-guide/blob/main/02-Opencode%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md)]
 -    [WSL 安装与 OpenClaw 部署指南](wsl-installation.md)
 -    [WSL 安装与 OpenClaw 部署指南](wsl-installation.md)
