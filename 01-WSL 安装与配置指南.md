@@ -165,22 +165,17 @@ Retype password:
 为了提高下载速度，建议更换为国内镜像源。编辑源配置文件：
 
 ```bash
-sudo nano /etc/apt/sources.list
+sudo nano /etc/apt/sources.list.d/ubuntu.sources
 ```
 
 使用**阿里云 镜像源**（Ubuntu 22.04）：
 
 ```
-# 备份原有源文件
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-
-# 替换为阿里云 Ubuntu 源（适配 22.04/24.04）
-sudo tee /etc/apt/sources.list > /dev/null <<EOF
-deb http://mirrors.aliyun.com/ubuntu/ $(lsb_release -cs) main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ $(lsb_release -cs)-updates main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ $(lsb_release -cs)-backports main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ $(lsb_release -cs)-security main restricted universe multiverse
-EOF
+Types: deb
+URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu/  # 或使用其他国内源
+Suites: noble noble-updates noble-backports noble-security
+Components: main universe restricted multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 
 ```
 
