@@ -4,7 +4,7 @@
 
 ## 内容
 
--    [WSL安装与配置指南](01-WSL 安装与配置指南.md)    
+-    [[WSL安装与配置指南](01-WSL 安装与配置指南.md)  ](https://github.com/heyang7656/openclaw-wsl-guide/blob/main/01-WSL%20%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97.md)  
 -    [WSL 安装与 OpenClaw 部署指南](02-Opencode 安装与使用教程.md)
 -    [WSL 安装与 OpenClaw 部署指南](wsl-installation.md)
 -    [WSL 安装与 OpenClaw 部署指南](wsl-installation.md)
