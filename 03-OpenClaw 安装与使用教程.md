@@ -404,7 +404,7 @@ openclaw gateway restart
 
 ---
 
-## 五、国冿API 配置
+## 五、大模型API 配置
 
 ### 5.1 MiniMax（推荐）
 
