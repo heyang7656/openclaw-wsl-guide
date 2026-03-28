@@ -168,12 +168,20 @@ Retype password:
 sudo nano /etc/apt/sources.list
 ```
 
-使用**清华大学 TUNA 镜像源**（Ubuntu 22.04）：
+使用**阿里云 镜像源**（Ubuntu 22.04）：
 
 ```
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+# 备份原有源文件
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+
+# 替换为阿里云 Ubuntu 源（适配 22.04/24.04）
+sudo tee /etc/apt/sources.list > /dev/null <<EOF
+deb http://mirrors.aliyun.com/ubuntu/ $(lsb_release -cs) main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ $(lsb_release -cs)-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ $(lsb_release -cs)-backports main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ $(lsb_release -cs)-security main restricted universe multiverse
+EOF
+
 ```
 
 保存退出：`Ctrl+O` → `Enter` → `Ctrl+X`
