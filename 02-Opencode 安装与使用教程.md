@@ -668,7 +668,7 @@ opencode init
 # 如果有运行的服务，先停止
 pkill -f opencode
 ```
-**步骤 3**：卸载opencode
+**步骤 2**：卸载opencode
 
 #### 方案1：npm全局安装的卸载
 1. 执行全局卸载命令：
