@@ -668,46 +668,24 @@ opencode init
 # 如果有运行的服务，先停止
 pkill -f opencode
 ```
+**步骤 3**：卸载opencode
 
-**步骤 2**：删除安装目录
-
+#### 方案1：npm全局安装的卸载
+1. 执行全局卸载命令：
+```bash
+npm uninstall -g opencode-ai
+```
+2. 验证卸载：执行`opencode --version`提示"command not found"即为成功
+3. （可选）清理配置缓存：
 ```bash
 rm -rf ~/.opencode
 ```
-
-**步骤 3**：清理环境变量
-
+#### 方案2：如果是用官方脚本安装的额外卸载方式
+如果之前是用`curl -fsSL https://opencode.ai/install | bash`安装的，还可以执行官方卸载脚本：
 ```bash
-# 编辑.bashrc 或.zshrc
-nano ~/.bashrc
-
-# 删除以下行
-export PATH="$HOME/.opencode/bin:$PATH"
+curl -fsSL https://opencode.ai/uninstall | bash
 ```
-
-**步骤 4**：重新加载配置
-
-```bash
-source ~/.bashrc
-```
-
-### 5.2 清理项目配置
-
-**删除 Opencode 创建的项目**：
-
-```bash
-# 列出生成的项目
-ls ~/projects/
-
-# 删除指定项目
-rm -rf ~/projects/my-project
-```
-
-**清理全局配置**：
-
-```bash
-rm -rf ~/.config/opencode
-```
+完成后再执行方案1的步骤清理残留即可。
 
 ### 5.3 恢复 sudoers 配置（如开启了免密）
 
