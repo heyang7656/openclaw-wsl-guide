@@ -164,22 +164,6 @@ Retype password:
 
 为了提高下载速度，建议更换为国内镜像源。编辑源配置文件：
 
-```bash
-sudo nano /etc/apt/sources.list.d/ubuntu.sources
-```
-
-使用**清华大学 镜像源**（Ubuntu 22.04）：
-
-```
-Types: deb
-URIs: https://mirrors.tuna.tsinghua.edu.cn/ubuntu/  # 或使用其他国内源
-Suites: noble noble-updates noble-backports noble-security
-Components: main universe restricted multiverse
-Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
-
-```
-
-保存退出：`Ctrl+O` → `Enter` → `Ctrl+X`
 
 配置**阿里云的 镜像源**
 
