@@ -181,6 +181,23 @@ Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 
 保存退出：`Ctrl+O` → `Enter` → `Ctrl+X`
 
+配置**阿里云的 镜像源**
+
+```bash
+sudo nano /etc/apt/sources.list
+
+```
+
+```
+deb http://mirrors.aliyun.com/ubuntu/ noble main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ noble-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ noble-backports main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ noble-security main restricted universe multiverse
+
+```
+
+
+
 **步骤 2**：更新系统
 
 ```bash
