@@ -173,10 +173,17 @@ sudo nano /etc/apt/sources.list
 ```
 
 ```
-deb http://mirrors.aliyun.com/ubuntu/ noble main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ noble-updates main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ noble-backports main restricted universe multiverse
-deb http://mirrors.aliyun.com/ubuntu/ noble-security main restricted universe multiverse
+deb https://mirrors.aliyun.com/ubuntu/ noble main restricted universe multiverse
+deb https://mirrors.aliyun.com/ubuntu/ noble-security main restricted universe multiverse
+deb https://mirrors.aliyun.com/ubuntu/ noble-updates main restricted universe multiverse
+deb https://mirrors.aliyun.com/ubuntu/ noble-proposed main restricted universe multiverse
+deb https://mirrors.aliyun.com/ubuntu/ noble-backports main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ noble main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ noble-security main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ noble-updates main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ noble-proposed main restricted universe multiverse
+deb-src https://mirrors.aliyun.com/ubuntu/ noble-backports main restricted universe multiverse
+
 
 ```
 保存退出：`Ctrl+O` → `Enter` → `Ctrl+X`
