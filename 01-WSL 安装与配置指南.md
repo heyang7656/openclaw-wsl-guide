@@ -195,7 +195,7 @@ deb http://mirrors.aliyun.com/ubuntu/ noble-backports main restricted universe m
 deb http://mirrors.aliyun.com/ubuntu/ noble-security main restricted universe multiverse
 
 ```
-
+保存退出：`Ctrl+O` → `Enter` → `Ctrl+X`
 
 
 **步骤 2**：更新系统
