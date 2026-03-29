@@ -168,7 +168,7 @@ Retype password:
 sudo nano /etc/apt/sources.list.d/ubuntu.sources
 ```
 
-使用**阿里云 镜像源**（Ubuntu 22.04）：
+使用**清华大学 镜像源**（Ubuntu 22.04）：
 
 ```
 Types: deb
@@ -552,12 +552,6 @@ sparseVhd=true
 2. **配置 Git 镜像**：
    ```bash
    git config --global url."https://ghproxy.com/".insteadOf "https://github.com/"
-   ```
-
-3. **使用代理**（如有）：
-   ```bash
-   export http_proxy=http://127.0.0.1:7890
-   export https_proxy=http://127.0.0.1:7890
    ```
 
 ### 6.3 定期维护建议
