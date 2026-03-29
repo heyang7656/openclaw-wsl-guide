@@ -92,11 +92,7 @@ curl -I https://github.com
 curl -I https://opencode.ai
 ```
 
-如无法访问，可能需要配置代理：
-```bash
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=http://127.0.0.1:7890
-```
+
 
 ### 2.2 一键安装 Opencode
 
@@ -105,7 +101,7 @@ export https_proxy=http://127.0.0.1:7890
 ```bash
 curl -fsSL https://opencode.ai/install | bash
 ```
-
+更多安装方法参考[opencode官方网站](https://opencode.ai)
 **安装过程说明**：
 - 自动检测系统环境
 - 下载最新的 Opencode 二进制文件
