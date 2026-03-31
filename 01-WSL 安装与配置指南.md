@@ -200,6 +200,7 @@ sudo apt upgrade -y
 
 # 安装常用工具
 sudo apt install -y curl wget git build-essential
+sudo apt update && sudo apt install nodejs npm -y
 ```
 
 ---
